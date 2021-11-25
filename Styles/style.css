@@ -3,18 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "Amazon Ember";
+  src: url(../Assets/Fonts/AmazonUIFont-amazonember_rg-cc7ebaa05a2cd3b02c0929ac0475a44ab30b7efa._V2_.woff2);
+}
 body {
-  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue",
-    "Helvetica", "Arial", sans-serif;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   height: 200vh;
 }
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
   flex-direction: column;
-  /* height: 44px; */
   width: 100%;
 }
 .top-header-container {
@@ -23,7 +25,7 @@ header {
   align-items: center;
   background-color: black;
   color: white;
-  width: 100vw;
+  width: 100%;
   height: 60px;
 }
 .amazon-logo-wrap {
@@ -44,7 +46,7 @@ header {
   text-align: left;
   height: 50px;
   width: 146px;
-  max-width: 146px;
+  min-width: 146px;
 }
 .location-icon {
   background-image: url(../Assets/Img/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png);
@@ -61,9 +63,9 @@ header {
 .location {
   font-size: 0.875rem;
   color: white;
+  font-weight: 700;
 }
 .search-bar-wrap {
-  background-color: tomato;
   width: 50%;
 }
 .search-bar-option {
@@ -72,6 +74,7 @@ header {
 
 .flag-wrap {
   display: flex;
+  padding: 14px 8px;
 }
 .account-wrap {
   display: flex;
@@ -89,13 +92,56 @@ header {
   width: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 4px solid #606060;
-  margin: 6px 0 0 2px;
+  border-top: 4px solid #a7acb2;
+  margin: 3px 0 0 5px;
 }
 
 .login-name,
 .returns {
   font-size: 0.75rem;
+}
+.account,
+.orders,
+.cart-label {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+.login-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 8px;
+}
+.returns-wrap {
+  padding: 10px 8px;
+}
+.cart-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 8px;
+}
+.cart-icon {
+  background-image: url(../Assets/Img/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png);
+  background-repeat: no-repeat;
+  background-position: -10px -340px;
+  height: 26px;
+  width: 38px;
+}
+.cart-label {
+  align-self: flex-end;
+  margin-top: 15px;
+}
+.cart-items-number {
+  position: absolute;
+  left: 13px;
+  right: auto;
+  top: 8px;
+  color: #f08804;
+  width: 19px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .border {
@@ -143,6 +189,17 @@ a {
   margin: 5px 0px 6px 0px;
   padding: 5px 9px;
 }
+
+.nav-bar-all-wrap {
+  display: flex;
+}
+.nav-bar-all-icon {
+  background-image: url(../Assets/Img/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png);
+  background-repeat: no-repeat;
+  background-position: -172px -255px;
+  height: 14px;
+  width: 17px;
+}
 /* .label {
   padding: 0 8px;
 } */
@@ -169,10 +226,30 @@ a {
 }
 .banner {
   height: 45px;
-  background-color: red;
-  width: 45%;
+  width: 650px;
   background-image: url(../Assets/Img/Fuji_BF_ILM_1X._CB652848759_.jpg);
-  background-repeat: no-repeat;
-  object-fit: cover;
-  background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* object-fit: cover; */
+  /* background-size: cover; */
+}
+
+.map-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding: 0 16px;
+}
+
+.map-wrap > ul {
+  display: flex;
+  font-size: 0.75rem;
+}
+.map-wrap > ul > li {
+  margin-right: 0.4235rem;
+  line-height: 14px;
+  color: #565959;
+}
+.map-label:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
