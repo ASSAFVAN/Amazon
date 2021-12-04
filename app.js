@@ -1,11 +1,7 @@
 function addToCart() {
   const quantity = document.querySelector(".qty-opt");
   let numOfCartItems = document.querySelector(".cart-items-number");
-  if (quantity.value === "1") {
-    numOfCartItems.textContent = "1";
-  } else if (quantity.value === "2") {
-    numOfCartItems.textContent = "2";
-  }
+  numOfCartItems.textContent++;
 }
 function changeImageOneOnHover() {
   const imageOne = document.querySelector(".big-img");
